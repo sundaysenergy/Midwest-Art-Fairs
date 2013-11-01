@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add an event</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/css/datepicker.css" rel="stylesheet" media="screen">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      .progress {
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form-horizontal">
+    <fieldset>
+
+    <!-- Form Name -->
+    <legend>Event registration</legend>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="event_name">Event Name</label>  
+      <div class="col-md-5">
+      <input id="event_name" name="event_name" type="text" placeholder="Event Name" class="form-control input-md" required="">
+        
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="event_start">Start Date</label>  
+      <div class="col-md-5 input-group date start-date">
+        <input id="event_start" name="event_start" type="text" placeholder="Start date of the event" class="form-control input-md"><span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="event_end">Start Date</label>  
+      <div class="col-md-5 input-group date end-date">
+        <input id="event_end" name="event_end" type="text" placeholder="End date of the event" class="form-control input-md"><span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
+      </div>
+    </div>
+
+    </fieldset>
+    </form>
+
+    <script src="//cdn.jsdelivr.net/jquery/2.0.3/jquery-2.0.3.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap-datepicker.js"></script>
+    <script>
+      $('.input-group.start-date').datepicker({
+          autoclose: true
+      });
+      $('.input-group.end-date').datepicker({
+        autoclose: true
+      });
+    </script>
+  </body>
+</html>
