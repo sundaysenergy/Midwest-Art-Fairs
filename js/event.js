@@ -31,6 +31,8 @@ $(document).ready(function() {
         if (status == 'OK') {
           var latlng = results[0].geometry.location;
           map.setCenter(latlng.lat(), latlng.lng());
+          $('#event-latitude').val(latlng.lat());
+          $('#event-longitude').val(latlng.lng());
           map.removeMarkers();
           map.addMarker({
             lat: latlng.lat(),
@@ -38,10 +40,11 @@ $(document).ready(function() {
             draggable: true,
             dragend: function(e) {
               var marker = map.markers.length;
-              alert(map.markers[marker-1].getPosition().lat() + ' ' + map.markers[marker-1].getPosition().lng());
+              $('#event-latitude').val(map.markers[marker-1].getPosition().lat());
+              $('#event-longitude').val(map.markers[marker-1].getPosition().lng());
             }
           });
-          map.zoomIn(10);
+          map.setZoom(13);
         }
       }
     });
